@@ -68,6 +68,7 @@ def get_bookinfo(bookId):
         return (isbn, newRating)
     else:
         print(f"get {bookId} book info failed")
+        return ("",0)
 
 
 def get_review_list(bookId):
@@ -402,9 +403,6 @@ if __name__ == "__main__":
             cover = book.get("cover")
             bookId = book.get("bookId")
             author = book.get("author")
-            print(f"title = {title}")
-            print(f"bookId = {bookId}")
-            print(f"author = {author}")
             check(bookId)
             chapter = get_chapter_info(bookId)
             bookmark_list = get_bookmark_list(bookId)
