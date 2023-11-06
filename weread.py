@@ -401,6 +401,8 @@ if __name__ == "__main__":
             bookId = book.get("bookId")
             author = book.get("author")
             print(f"title = {title}")
+            print(f"bookId = {bookId}")
+            print(f"author = {author}")
             check(bookId)
             chapter = get_chapter_info(bookId)
             bookmark_list = get_bookmark_list(bookId)
