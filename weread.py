@@ -60,6 +60,7 @@ def get_bookinfo(bookId):
     params = dict(bookId=bookId)
     r = session.get(WEREAD_BOOK_INFO, params=params)
     isbn = ""
+    print(f"get book info {r.text}")
     if r.ok:
         data = r.json()
         isbn = data["isbn"]
@@ -399,6 +400,7 @@ if __name__ == "__main__":
             cover = book.get("cover")
             bookId = book.get("bookId")
             author = book.get("author")
+            print(f"title = {title}")
             check(bookId)
             chapter = get_chapter_info(bookId)
             bookmark_list = get_bookmark_list(bookId)
